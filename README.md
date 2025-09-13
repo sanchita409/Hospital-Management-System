@@ -18,10 +18,12 @@ It’s recommended to use a virtual environment to manage dependencies.
 
 # For Windows
 python -m venv venv
+
 venv\Scripts\activate
 
 # For Linux / MacOS
 python3 -m venv venv
+
 source venv/bin/activate
 
 3️⃣ Install Dependencies
@@ -33,6 +35,8 @@ python manage.py runserver
 
 Now open your browser and go to:
 👉 http://127.0.0.1:8000/
+
+
 
 
 🔑 User Roles:-
