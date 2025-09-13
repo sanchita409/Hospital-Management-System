@@ -1,0 +1,71 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+</head>
+<body>
+  <h2>Welcome, Admin!</h2>
+  <p>This is the admin dashboard.</p> {% endcomment %}
+  {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    .admin-header { background: #0066cc; color: #fff; padding: 2rem 0; text-align: center; }
+    .admin-cards { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem; }
+    .admin-card { background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 2rem 1.5rem; min-width: 260px; max-width: 320px; flex: 1 1 260px; text-align: center; transition: box-shadow 0.2s; }
+    .admin-card:hover { box-shadow: 0 8px 32px rgba(0,102,204,0.15); }
+    .admin-card h3 { color: #0066cc; margin-bottom: 1rem; }
+    .admin-card .icon { font-size: 2.5rem; color: #0066cc; margin-bottom: 0.5rem; }
+    .admin-actions { margin-top: 2.5rem; text-align: center; }
+    .admin-actions a { margin: 0 1rem; }
+    body { background: #f4f8fb; }
+  </style>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="admin-header">
+    <h1>Welcome, Admin</h1>
+    <p class="lead">This is your dashboard. Manage users, doctors, patients, and view system stats.</p>
+  </div>
+  <div class="container">
+    <div class="admin-cards">
+      <div class="admin-card">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <h3>All Users</h3>
+        <p>View and manage all users in the system.</p>
+        <a href="/admin/myapp/user/" class="btn btn-outline-primary btn-sm">Manage Users</a>
+      </div>
+      <div class="admin-card">
+        <div class="icon"><i class="fas fa-user-md"></i></div>
+        <h3>Doctors</h3>
+        <p>See all registered doctors and their details.</p>
+        <a href="/admin/myapp/user/?role=doctor" class="btn btn-outline-primary btn-sm">View Doctors</a>
+      </div>
+      <div class="admin-card">
+        <div class="icon"><i class="fas fa-user-injured"></i></div>
+        <h3>Patients</h3>
+        <p>See all registered patients and their details.</p>
+        <a href="/admin/myapp/user/?role=patient" class="btn btn-outline-primary btn-sm">View Patients</a>
+      </div>
+      <div class="admin-card">
+        <div class="icon"><i class="fas fa-cogs"></i></div>
+        <h3>Site Admin</h3>
+        <p>Go to Django Admin for advanced management.</p>
+        <a href="/admin/" class="btn btn-outline-secondary btn-sm">Django Admin</a>
+      </div>
+    </div>
+    <div class="admin-actions">
+      <a href="/" class="btn btn-primary">Go to Home</a>
+      <a href="/accounts/login/?type=admin" class="btn btn-outline-danger">Logout</a>
+    </div>
+  </div>
+</body>
+</html>
