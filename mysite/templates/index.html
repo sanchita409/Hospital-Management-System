@@ -1,0 +1,302 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare Management System</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script defer src="{% static 'js/login_redirect.js' %}"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">HealthCare+</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#">Login &#x25BE;</a>
+          <ul class="dropdown-content" style="list-style-type: none;">
+            <li><a href="/accounts/login/?type=admin">Admin Login</a></li>
+            <li><a href="/accounts/login/?type=doctor">Doctor Login</a></li>
+            <li><a href="/accounts/login/?type=patient">Patient Login</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="height:70vh">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/assets/carousel1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/assets/carousel2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/assets/carousel3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image">
+       <img src="..\static\assets\aboutus.avif" alt="Medical team with patient">
+        </div>
+      <div class="about-content">
+        <h2><span class="highlight">ABOUT</span> US</h2>
+        <h2>Something about this hospital and about us</h2>
+        <p>
+          Welcome to our healthcare management system designed for efficiency and patient care excellence.
+          At Health Care, we're dedicated to revolutionizing healthcare administration through innovative
+          technology. Our system streamlines operations, enhances patient care, and empowers healthcare
+          providers to deliver exceptional service.
+        </p>
+        <p>
+          <strong>Our Vision</strong> We envision a future where healthcare management is seamless, efficient, and
+          patient-centered. Our goal is to provide cutting-edge solutions that optimize workflows and
+          improve healthcare delivery.
+          </p>
+        <a href="#" class="btn">Now More →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="content-section">
+    <center>
+    <h2 class="section-title">OUR <span>SERVICES</span></h2></center>
+    <div class="services-grid">
+      
+      <div class="service-box">
+        <i class="fas fa-heartbeat service-icon"></i>
+        <h3>Emergency Care</h3>
+        <p>24/7 rapid response and advanced medical technologies for immediate treatment of emergencies. Dedicated team ensures prompt, effective care at Health Care.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-notes-medical service-icon"></i>
+        <h3>Free Checkup</h3>
+        <p>Experience complimentary checkups at Health Care for proactive health monitoring. Our team provides thorough assessments and personalized recommendations for your well-being.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-procedures service-icon"></i>
+        <h3>Oparation & Sergary</h3>
+        <p>Trust our skilled surgical team at Health Care for expert procedures. We prioritize safety and precision to ensure optimal patient outcomes.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-user-md service-icon"></i>
+        <h3>Expart Doctor</h3>
+        <p>At Health Care, rely on our experienced doctors for personalized treatment and superior medical guidance. Trust us for your healthcare needs.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-ambulance service-icon"></i>
+        <h3>24/7 Ambulance</h3>
+        <p>Our round-the-clock ambulance service at Health Care ensures swift response and safe transportation, providing peace of mind during emergencies.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-tint service-icon"></i>
+        <h3>Free Blood Testiong</h3>
+        <p>Benefit from complimentary blood testing at Health Care, ensuring early detection and monitoring of health conditions. Your well-being matters to us.</p>
+      </div>
+
+      <div class="service-box ">
+        <i class="fas fa-prescription-bottle-alt service-icon"></i>
+        <h3>Medicine & Pharmacy</h3>
+        <p>Find all your medication needs conveniently at Health Care's pharmacy. Our wide selection ensures availability, quality, and expert guidance for optimal health management.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fas fa-file-medical-alt service-icon"></i>
+        <h3>Quality Enssure</h3>
+        <p>At Health Care, we prioritize quality assurance in every aspect of care delivery, ensuring safety, effectiveness, and patient satisfaction. Your health is our commitment.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="departments" class="department-section">
+    <h2 class="section-title">OUR <span>DEPARTMENT</span></h2>
+
+    <div class="department-grid">
+
+      <div class="department-card">
+        <img src="../static/assets/cardiology.jpg" alt="Cardiology">
+        <h3>Cardiology</h3>
+        <p>Heart care specialists offering expert diagnosis, treatment, and management.</p>
+      </div>
+
+      <div class="department-card">
+        <img src="../static/assets/dental.avif" alt="Dental">
+        <h3>Dental</h3>
+        <p>Comprehensive dental care services for optimal oral health and wellness.</p>
+      </div>
+
+      <div class="department-card">
+        <img src="../static/assets/Neurologist.webp" alt="Neurologist">
+        <h3>Neurologist</h3>
+        <p>Expert diagnosis and treatment for neurological conditions at Health Care.</p>
+      </div>
+
+      <div class="department-card">
+        <img src="..\static\assets\Pediatric.jpg" alt="Pediatric">
+        <h3>Pediatric</h3>
+        <p>Specialized care for infants, children, and adolescents provided with expertise.</p>
+      </div>
+
+      <div class="department-card">
+        <img src="..\static\assets\Pulmonary.jpg" alt="Pulmonary">
+        <h3>Pulmonary</h3>
+        <p>Here’s the histry f lovely lady. who was bringing up three very..</p>
+      </div>
+
+      <div class="department-card">
+        <img src="..\static\assets\Traomatology.jpg" alt="Traomatology">
+        <h3>Traomatology</h3>
+        <p>Specialized care for traumatic injuries, offering expert diagnosis, treatment, and rehabilitation.</p>
+      </div>
+
+      <div class="department-card">
+        <img src="..\static\assets\Urology.webp" alt="Urology">
+        <h3>Urology</h3>
+        <p>Specialized care for urinary tract and male reproductive system conditions.</p>
+      </div>
+
+      <div class="department-card">
+        <img src="../static\assets\X-ray.jpeg" alt="X-ray">
+        <h3>X-ray</h3>
+        <p>Advanced diagnostic imaging services, including X-ray, for accurate medical assessments.</p>
+      </div>
+
+    </div>
+  </section>
+
+   <section class="team-section">
+    <h2 class="section-title">OUR <span>TEAM</span></h2>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <img src="..\static\assets\t1.webp" alt="John Abrar">
+        <h3>John Abrar</h3>
+        <p>Serzery</p>
+      </div>
+
+      <div class="team-card">
+        <img src="..\static\assets\t2.jpeg" alt="Marzoon">
+        <h3>Marzoon</h3>
+        <p>Unology</p>
+      </div>
+
+      <div class="team-card">
+        <img src="..\static\assets\t3.jpeg" alt="Alina">
+        <h3>Alina</h3>
+        <p>Cardiology</p>
+      </div>
+
+      <div class="team-card">
+        <img src="..\static\assets\t4.jpg">
+        <h3>Oliva</h3>
+        <p>Dental</p>
+      </div>
+
+      <div class="team-card">
+        <img src="..\static\assets\t5.jpeg" alt="Barlina">
+        <h3>Barlina</h3>
+        <p>Neurologist</p>
+      </div>
+
+      <div class="team-card">
+        <img src="../static/assets/team1.jpeg" alt="Foysal">
+        <h3>Foysal</h3>
+        <p>Pediatric</p>
+      </div>
+
+      <div class="team-card">
+        <img src="https://img.freepik.com/free-photo/portrait-male-doctor_23-2148827793.jpg" alt="Krisna">
+        <h3>Krisna</h3>
+        <p>Pulmonary</p>
+      </div>
+
+      <div class="team-card">
+        <img src="..\static\assets\t6.jpeg" alt="Choity">
+        <h3>Choity</h3>
+        <p>Traomatology</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <div class="footer-container">
+
+    <!-- Column 1: Contact Info -->
+    <div class="footer-column">
+      <h3>HEALTH CARE</h3>
+      <p><i class="fa fa-map-marker-alt"></i> Chakeri-Kanpur</p>
+      <p><i class="fa fa-phone"></i> +880157000-0000</p>
+      <p><i class="fa fa-envelope"></i> heathcare.bd@gmail.com</p>
+    </div>
+
+    <!-- Column 2: Services -->
+    <div class="footer-column">
+      <h4>SERVICES</h4>
+      <ul>
+        <li><a href="#">Branding</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Advertisement</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Company -->
+    <div class="footer-column">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Press kit</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Legal -->
+    <div class="footer-column">
+      <h4>LEGAL</h4>
+      <ul>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+  </section>
+
+  <footer class="foot2">
+    <p>&copy; 2025 HealthCare+. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body class="login-page">
+  {% if messages %}
+    <script>
+      {% for message in messages %}
+        alert("{{ message|escapejs }}");
+      {% endfor %}
+    </script>
+  {% endif %}
+  <div class="login-container" style="box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37); border-radius: 16px; background: #fff;">
+    <h2 style="color: #0066cc; font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">Patient Registration</h2>
+    <form method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" style="background: #0066cc; color: #fff; border: none; border-radius: 8px; padding: 0.8rem 0; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s;">Register</button>
+    </form>
+    <p style="margin-top: 1rem;">Already have an account? <a href="/accounts/login/?type=patient" style="color: #0066cc; text-decoration: underline;">Login here</a></p>
+    <a href="/" style="display: inline-block; margin-top: 1rem; color: #2ca89c; text-decoration: none; font-weight: bold;">&larr; Back to Home</a>
+  </div>
+</body>
+</html>
